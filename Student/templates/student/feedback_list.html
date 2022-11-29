@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head>
+		
+        <title>FEEDBACK</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    
+	  <style>
+		div {
+			width: 300px;
+		}
+		 
+		h1,
+		h3 {
+			color: green;
+		}
+		 
+		hr {
+			position: relative;
+			top: 20px;
+			border: none;
+			height: 12px;
+			background: black;
+			margin-bottom: 50px;
+			
+		}
+		</style>
+	
+	</head>
+    
+    <body style="background-color:lightgreen">
+
+
+    	  <h3><center><font color="red">FEEDBACK </font> </h3></center>
+    	  <hr color="green">
+
+    	 
+
+    	 		<table id='data'  border=1  background-color="red" align="center" >
+				<thead>	
+				<tr>
+  				<th>USER NAMES</th>
+        
+          
+
+<th>Registration_no</th>
+<th>Date</th>
+<th>subject</th>
+<th>feedback</th>
+          
+		  
+ 				</tr>
+			</thead>
+
+
+		  			<tbody>
+
+
+	    		{% for entry in object_list %}
+	    		<tr>
+  				<td> {{ entry.user }} </td>
+          {% comment %} <td align="center"> {{ entry.city }} </td> {% endcomment %}
+		  <td align="center"> {{ entry.Registration_no}} </td>
+		  <td align="center"> {{ entry.date}} </td>
+		  <td align="center"> {{ entry.subject }} </td>
+          <td align="center"> {{ entry.feedback }} </td>
+          
+
+
+ 				</tr>
+
+				 {% empty %}  
+        <h3>No objects Find</h3>  
+			    	
+			  
+				{% endfor %}
+
+			</tbody>
+
+
+				</table>
+				<hr>
+
+				
+        
+    	
+    	
+    </body>

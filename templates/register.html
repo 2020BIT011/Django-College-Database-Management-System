@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Signup Page</title>
+  <link rel="stylesheet" href="one.css"> 
+  <link rel="stylesheet" href="{% static 'css-js/bootstrap.css' %}"> 
+  <link rel="stylesheet" href="{% static 'css-js/bootstrap.js' %}"> 
+</head>
+<style>
+#form3Example1w{
+  width:432px;
+}
+
+</style>
+
+
+<body>
+  <section class="h-100 h-custom">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+
+              <form action="register" method="post" class="px-md-2">
+                {% csrf_token%}
+
+                <div class="form-outline mb-4">
+                  <input type="text" name='first_name' placeholder="first_name" id="form3Example1q"
+                    class="form-control" />
+                  <label class="form-label" for="form3Example1q">First-Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" name='last_name' placeholder="last_name" id="form3Example1q"
+                    class="form-control" />
+                  <label class="form-label" for="form3Example1q">Last-Name</label>
+                </div>
+
+                <div class="form-outline mb-4">
+                  <input type="text" name='username' placeholder="username" id="form3Example1q"
+                    class="form-control" />
+                  <label class="form-label" for="form3Example1q">Username</label>
+                </div>
+                <!--           
+                                              <div class="row">
+                                                <div class="col-md-6 mb-4">
+                                
+                                                  <div class="form-outline datepicker">
+                                                    <input type="date" class="form-control" id="exampleDatepicker1" />
+                                                    <label for="exampleDatepicker1" class="form-label">D-O-B</label>
+                                                  </div>
+                                
+                                                </div> -->
+                <!-- <div class="col-md-6 mb-4">
+                                
+                                                  <select class="select">
+                                                    <option value="1">Gender</option>
+                                                    <option value="2">Female</option>
+                                                    <option value="3">Male</option>
+                                                    <option value="4">Other</option>
+                                                  </select>
+                                
+                                                </div> -->
+            {% comment %} </div> {% endcomment %}
+
+            <!-- <div class="mb-4">
+                                
+                                                <select class="select">
+                                                  <option value="1">Type</option>
+                                                  <option value="2">student</option>
+                                                  <option value="3">Teacher</option>
+                                                <option value="4">Class 3</option> 
+                                                </select>
+                                
+                                              </div> -->
+
+            <div class="row mb-4 " >
+              <div class="col-md-6">
+
+                <div class="form-outline " >
+                  <input type="email" name="email" placeholder="email" id="form3Example1w" class="form-control" />
+                  <label class="form-label" for="form3Example1w">Email-id</label>
+                </div>
+                <div class="form-outline">
+                  <input type="password" name="Password1" placeholder="password" id="form3Example1w"
+                    class="form-control" />
+                  <label class="form-label" for="form3Example1w">Password</label>
+                </div>
+
+                <div class="form-outline">
+                  <input type="password" name="Password2" placeholder="password" id="form3Example1w"
+                    class="form-control" />
+                  <label class="form-label" for="form3Example1w">Confirm Password</label>
+                </div>
+
+              </div>
+              <!-- </div>
+                                              <div class="row mb-4 pb-2 pb-md-0 mb-md-5">
+                                                  <div class="col-md-6">
+                                  
+                                                    
+                                  
+                                                  </div>
+                                                </div> -->
+
+              <button type="submit" class="btn btn-success btn-lg mb-1">Submit</button>
+
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+   
+<div>
+  {%for message in messages %}
+<h3>{{message}}</h3>
+   {%endfor%}
+
+
+</div>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+{% comment %} <!doctype html>
+<html>
+    <head>
+        <title>Student_Details</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+       <style>
+		.myTable { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lemonchiffon;
+  		border-collapse: collapse; 
+  		}
+		.myTable th { 
+  		background-color: lightblue;
+  		color: red; 
+  		}
+		.myTable td, 
+		.myTable th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		.myTable1 { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lightblue;
+  		border-collapse: collapse; 
+  		}
+		.myTable1 th { 
+  		background-color: goldenrod;
+  		color: white; 
+  		}
+		.myTable1 td, 
+		.myTable1 th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		hr{
+  		color: #f00;
+		background-color: #f00;
+		height: 5px;
+		}
+		
+		</style>
+
+
+    </head>
+    
+    <body style="background-color:lightblue;">
+		<br> 
+		<div>
+			<marquee bgcolor=orange width=100% direction=left> <h2>Student_Details</h2> </marquee>
+        </div>
+    	 
+<br><br>
+    	 		<table border=1  color="red" align="center" >
+				<tr> 
+  				<th>USER NAMES</th>
+          <th>Student Name</th>
+            <th>Registraion Number </th>
+            <th>Address </th>
+            <th>Taluka</th>
+            <th>District </th>
+            <th>State </th>
+            <th>photo</th>
+            <th>pincode </th>
+
+
+ 				</tr>
+ 
+        
+
+	    		{% for entry in stud12 %}
+	    		<tr>
+  				<td> {{ entry.user }} </td>
+          <td align="center"> {{ entry.Student_Name }} </td>
+          <td align="center"> {{ entry.Reg_no }} </td>
+          <td align="center"> {{ entry.Address }} </td>
+          <td align="center"> {{ entry.Taluka }} </td>
+          <td align="center"> {{ entry.District }} </td>
+          <td align="center"> {{ entry.State }} </td>
+          <td align="center"> {{ entry.photo }} </td>
+          <td align="center"> {{ entry.pincode }} </td>
+          
+
+ 				</tr>
+			    	
+			  
+				{% endfor %}
+
+				</table>
+			
+			
+
+
+
+
+               
+    </body>
+</html>
+
+
+ {% endcomment %}
+
+
+ <!doctype html>
+<html>
+    <head>
+        <title>List of persons</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+       <style>
+		.myTable { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lemonchiffon;
+  		border-collapse: collapse; 
+  		}
+		.myTable th { 
+  		background-color: lightblue;
+  		color: red; 
+  		}
+		.myTable td, 
+		.myTable th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		.myTable1 { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lightblue;
+  		border-collapse: collapse; 
+  		}
+		.myTable1 th { 
+  		background-color: goldenrod;
+  		color: white; 
+  		}
+		.myTable1 td, 
+		.myTable1 th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		hr{
+  		color: #f00;
+		background-color: #f00;
+		height: 5px;
+		}
+		
+		</style>
+
+
+    </head>
+    
+    <body>
+    	<h2> <center>WELCOME  </h2></center>
+    	  <h3><center><font color="red">Developed Under the Guidance of HOD Sir Balaji Shetty. </font> </h3></center>
+    	  <hr color="green">
+    	  <h4> <center> <b><i>STUDENT DETAILS: </i></b></center> </h4>
+    	 
+
+    	 		<table border=1  color="red" align="center" >
+				<tr>
+  				<th>USER NAMES</th>
+          <th>Student_name</th>
+          <th>Reg_no</th>
+        <th>Address</th>
+          <th> Taluka</th>
+          <th>District</th>
+          <th>State</th>
+		  <th>pincode</th>
+ 				</tr>
+ 
+
+		  
+
+	    		{% for entry in stud12 %}
+	    		<tr>
+  				<td> {{ entry.user }} </td>
+          <td align="center"> {{ entry.Student_Name }} </td>
+          <td align="center"> {{ entry.Reg_no}} </td>
+          <td align="center"> {{ entry.Address }} </td>
+          <td align="center"> {{ entry.Taluka}} </td>
+          <td align="center"> {{ entry.District }} </td>
+          <td align="center"> {{ entry.State }} </td>
+		  <td align="center"> {{ entry.pincode }} </td>
+
+ 				</tr>
+			    	
+			  
+				{% endfor %}
+
+				</table>
+				<hr>
+
+				{% comment %} <table border=1  color="red" align="center" class="myTable1">
+				<tr>
+  				<th>City Name</th>
+  				<th>Country</th>
+ 				</tr>
+  
+
+				{% for entry1 in city12 %}
+				<tr>
+  				<td> {{ entry1.city_name }} </td>
+  				<td align="center"> {{ entry1.country }} </td>
+ 				</tr>
+			    
+
+			    	
+				{% endfor %} {% endcomment %}
+
+
+				
+        
+    	
+    	
+    </body>
+</html>
+
+
+

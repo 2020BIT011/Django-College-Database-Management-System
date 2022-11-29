@@ -1,0 +1,226 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Student_Details</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+       <style>
+		.myTable { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lemonchiffon;
+  		border-collapse: collapse; 
+  		}
+		.myTable th { 
+  		background-color: lightblue;
+  		color: red; 
+  		}
+		.myTable td, 
+		.myTable th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		.myTable1 { 
+  		width: 40%;
+  		text-align: left;
+  		background-color: lightblue;
+  		border-collapse: collapse; 
+  		}
+		.myTable1 th { 
+  		background-color: goldenrod;
+  		color: white; 
+  		}
+		.myTable1 td, 
+		.myTable1 th { 
+  		padding: 10px;
+  		border: 2px solid goldenrod; 
+  		}
+
+  		hr{
+  		color: #f00;
+		background-color: #f00;
+		height: 5px;
+		}
+		
+		</style>
+
+
+    </head>
+    
+    <body style="background-color:lightgreen;">
+		<br> 
+		<div>
+			<marquee bgcolor=LightGray width=100% direction=left> <h2>WELCOME TO PROJECT SGGS</h2> </marquee>
+			</div>
+			<img src = "sggs.jpg" align=right alt="Sggs Nanded" width="200" height="100"/>
+    	{% comment %} <center> <h2 style="background-color:lightGray;"> WELCOME TO PROJECT SGGS </h2></center> {% endcomment %}
+    	  <h3><center><font color="red">Developed Under the Guidance of Balaji Shetty Sir </font> </h3></center>
+    	  <hr color="green">
+
+    	  <h4> <center> <b><i>Student_Details </i></b></center> </h4>
+    	 
+
+    	 		<table border=1  color="red" align="center" >
+				<tr> 
+  				<th>USER NAMES</th>
+          <th>Student Name</th>
+            <th>Registraion Number </th>
+            <th>Address </th>
+            <th>Taluka</th>
+            <th>District </th>
+            <th>State </th>
+            <th>photo</th>
+            <th>pincode </th>
+
+
+ 				</tr>
+ 
+        
+
+	    		{% for entry in stud12 %}
+	    		<tr>
+  				<td> {{ entry.user }} </td>
+          <td align="center"> {{ entry.Student_Name }} </td>
+          <td align="center"> {{ entry.Reg_no }} </td>
+          <td align="center"> {{ entry.Address }} </td>
+          <td align="center"> {{ entry.Taluka }} </td>
+          <td align="center"> {{ entry.District }} </td>
+          <td align="center"> {{ entry.State }} </td>
+          <td align="center"> {{ entry.photo }} </td>
+          <td align="center"> {{ entry.pincode }} </td>
+          
+
+ 				</tr>
+			    	
+			  
+				{% endfor %}
+
+				</table>
+			
+				
+
+
+                <h4> <center> <b><i>Addmission_Details </i></b></center> </h4>
+    	 
+
+                <table border=1  color="red" align="center" >
+               <tr> 
+                 <th>USER NAMES</th>
+         <th>Registraion Number </th>
+         <th>Student Name</th>
+           <th>Class name </th>
+           <th>Branch</th>
+           <th>Year </th>
+           <th>Date of Addmission </th>
+           <th>Semester</th>
+
+
+                </tr>
+
+
+               {% for entry in Add12 %}
+               <tr>
+                 <td> {{ entry.user }} </td>
+         <td align="center"> {{ entry.Reg_No }} </td>
+         <td align="center"> {{ entry.S_name }} </td>
+         <td align="center"> {{ entry.Class_name }} </td>
+         <td align="center"> {{ entry.Branch }} </td>
+         <td align="center"> {{ entry.year }} </td>
+         <td align="center"> {{ entry.Date_of_Admission }} </td>
+         <td align="center"> {{ entry.Semester }} </td>
+         
+
+                </tr>
+                   
+             
+               {% endfor %}
+
+               </table>
+
+               
+
+               <h4> <center> <b><i>Marks_Details </i></b></center> </h4>
+    	 
+
+               <table border=1  color="red" align="center" >
+              <tr> 
+                <th>USER NAMES</th>
+        <th>Registraion Number </th>
+        <th>Subject Name</th>
+          <th>Marks </th>
+          <th>Semester</th>
+          <th>Year </th>
+    
+          
+
+
+               </tr>
+
+        
+
+
+              {% for entry in mark12 %}
+              <tr>
+                <td> {{ entry.user }} </td>
+        <td align="center"> {{ entry.Registration_No }} </td>
+        <td align="center"> {{ entry.Subject }} </td>
+        <td align="center"> {{ entry.marks }} </td>
+        <td align="center"> {{ entry.Semester }} </td>
+        <td align="center"> {{ entry.year }} </td>
+        
+
+               </tr>
+                  
+            
+              {% endfor %}
+
+              </table>
+
+              
+
+              <h4> <center> <b><i>Feedback_Details </i></b></center> </h4>
+    	 
+
+              <table border=1  color="red" align="center" >
+             <tr> 
+               <th>USER NAMES</th>
+       <th>Registraion Number </th>
+       <th>Date</th>
+       <th>Subject Name</th>
+         <th>Feedback </th>
+    
+   
+        
+
+              </tr>
+
+
+
+             {% for entry in feed12 %}
+             <tr>
+               <td> {{ entry.user }} </td>
+       <td align="center"> {{ entry.Registration_no }} </td>
+       <td align="center"> {{ entry.date }} </td>
+       <td align="center"> {{ entry.subject }} </td>
+       <td align="center"> {{ entry.feedback }} </td>
+       
+              </tr>
+                 
+           
+             {% endfor %}
+
+             </table>
+
+
+
+
+
+
+
+               
+    </body>
+</html>
+
+
+

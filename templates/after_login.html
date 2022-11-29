@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <style>
+        .Table{
+            padding-left: 500px;
+            padding-top: 100px;
+            padding-bottom:100px ;
+        }
+        #create{
+            size: 50px;
+            padding: 20px;
+            margin: 20px;
+            font-size: 25px;
+            border-color: darkgoldenrod;
+        }
+        fieldset table tr td #create:hover{
+            background-color: rgb(126, 19, 153);
+            color: rgb(144, 240, 35);
+            border-radius: 10px;
+        }
+        #reg{
+            padding: 20px;
+            margin: 20px;
+            font-size: 25px;
+            border-color: darkgoldenrod;    
+        }
+        fieldset table tr td #reg:hover{
+            background-color: rgb(126, 18, 153);
+            color: rgb(144, 240, 35);
+            border-radius: 10px;
+        }
+        #att{
+            padding: 20px;
+            margin: 20px;
+            font-size: 25px;
+            border-color: darkgoldenrod;
+        }
+        fieldset table tr td #att:hover{
+            background-color: rgb(126, 18, 153);
+            color: rgb(144, 240, 35);
+            border-radius: 10px;
+        }
+        #logout{
+            padding: 20px;
+            margin: 20px;
+            font-size: 25px;
+            border-color: darkgoldenrod;
+        }
+        fieldset table tr td #logout:hover{
+            background-color: rgb(126, 18, 153);
+            color: rgb(144, 240, 35);
+            border-radius: 10px;
+        }
+    
+    </style>
+    <title>After pressing login</title>
+</head>
+<body bgcolor="violet">
+    <fieldset>
+        <table class="Table">
+            <tr >
+                <td><a href="add_student"><button id="reg">Register New Student</button></a></td>
+            </tr>
+            <tr >
+                <td><a href="#"><button id="att">Take Attendence</button></a></td>
+            </tr>
+            <tr >
+                <td><a href="show_students"><button id="logout">Check Previous Attendence</button></a></td>
+            </tr>
+            <tr >
+                <td><a href="#"><button id="logout">LOGOUT</button></a></td>
+            </tr>
+        </table>
+    </fieldset>
+</body>
+</html>
